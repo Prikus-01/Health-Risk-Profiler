@@ -1,4 +1,4 @@
-## Health Risk Profiler
+## Health Risk Profiler 
 
 An Express.js backend that profiles non-diagnostic health risks from simple lifestyle inputs (age, smoking, exercise, diet). It supports:
 
@@ -10,26 +10,28 @@ An Express.js backend that profiles non-diagnostic health risks from simple life
 
 ---
 
-### Table of Contents
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
-- [Local Setup](#local-setup)
-- [Environment Variables](#environment-variables)
-- [Run](#run)
-- [API Reference](#api-reference)
-- [Samples (cURL)](#samples-curl)
-- [Project Structure](#project-structure)
-- [Postman Collection](#postman-collection)
-- [Common Issues](#common-issues)
-- [Security Notes](#security-notes)
-- [License](#license)
+  ### Table of Contents
+  - [Features](#features)
+  - [Tech Stack](#tech-stack)
+  - [Architecture](#architecture)
+  - [Prerequisites](#prerequisites)
+  - [Local Setup](#local-setup)
+  - [Environment Variables](#environment-variables)
+  - [Run](#run)
+  - [Live Backend](#live-backend)
+  - [API Reference](#api-reference)
+  - [Samples (cURL)](#samples-curl)
+  - [Project Structure](#project-structure)
+  - [Postman Collection](#postman-collection)
+  - [Common Issues](#common-issues)
+  - [Security Notes](#security-notes)
+  - [License](#license)
 
 ---
 
 ### Features
 - Robust text parsing tolerant to OCR quirks for survey ingestion.
+- Live backend for testing and development.
 - Image-to-text using OCR.space API.
 - Three AI-powered endpoints using Google GenAI (Gemini):
   - Risk factor extraction with confidence.
@@ -105,15 +107,25 @@ flowchart TD
 
 ---
 
-### Run
-- Development: `npm start` (uses `nodemon` per `package.json`)
-- Health check: `GET /health` should return `{ "status": "ok", "timestamp": "..." }`.
+  ### Run
+  - Development: `npm start` (uses `nodemon` per `package.json`)
+  - Health check: `GET /health` should return `{ "status": "ok", "timestamp": "..." }`.
 
----
+  ---
+
+  ### Live Backend
+  The backend is also deployed on Render:
+  
+  - URL: https://health-risk-profiler-z84y.onrender.com
+  - Health Check: https://health-risk-profiler-z84y.onrender.com/health
+  
+  Note: If you call the API from a browser-based frontend hosted on another origin, you may need to enable CORS in `app.js`.
 
 ## API Reference
 
-Base URL: `http://localhost:3000`
+Base URLs:
+- Local: `http://localhost:3000`
+- Production: `https://health-risk-profiler-z84y.onrender.com`
 
 ### 1) Health Check
 - Method: GET
@@ -172,7 +184,7 @@ curl -X POST http://localhost:3000/api/survey \
   
   Sample image used for OCR testing:
   
-  ![OCR Sample](./imagee.png){ width="300" }
+  ![OCR Sample](./imagee.png)
   
 
   ### Get Risk Factors & Confidence
