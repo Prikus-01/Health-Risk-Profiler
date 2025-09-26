@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "fce4eddb-2483-4c4a-8c84-9f3b636ba47a",
+		"name": "Health Risk Profiler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33670571"
+	},
+	"item": [
+		{
+			"name": "risk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"age\": 20,\r\n        \"smoker\": false,\r\n        \"exercise\": \"daily\",\r\n        \"diet\": \"heathy\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/risk",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"risk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "risk-level",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"age\": 20,\r\n        \"smoker\": false,\r\n        \"exercise\": \"daily\",\r\n        \"diet\": \"heathy\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/risk-level",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"risk-level"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recommendation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"age\": 20,\r\n        \"smoker\": false,\r\n        \"exercise\": \"daily\",\r\n        \"diet\": \"heathy\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/risk-level",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"risk-level"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image_input",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\" : {\r\n        \"age\":42,\r\n        \"smoker\":true,\r\n        \"exercise\":\"rarely\",\r\n        \"diet\":\"high sugar\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/survey",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"survey"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "text_input",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\" : {\r\n        \"age\":42,\r\n        \"smoker\":true,\r\n        \"exercise\":\"rarely\",\r\n        \"diet\":\"high sugar\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/survey",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"survey"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
