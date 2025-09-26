@@ -1,0 +1,21 @@
+{
+  "name": "ai_backend",
+  "version": "1.0.0",
+  "description": "Health Risk Profiler",
+  "keywords": [
+    "Health",
+    "Risk",
+    "Profiler",
+    "API"
+  ],
+  "license": "MIT",
+  "author": "Munawar",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
