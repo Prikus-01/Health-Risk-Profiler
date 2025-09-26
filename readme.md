@@ -160,28 +160,31 @@ Notes:
 ### Submit Survey with Text
 ```bash
 curl -X POST http://localhost:3000/api/survey \
-  -H "Content-Type: application/json" \
   -d '{
     "text": "age: 52\nsmoker: yes\nexercise: low\ndiet: high sugar"
   }'
 ```
+  ### Submit Survey with Image
+  ```bash
+  curl -X POST http://localhost:3000/api/survey \
+    -F image=@/absolute/path/to/survey.png
+  ```
+  
+  Sample image used for OCR testing:
+  
+  ![OCR Sample](./imagee.png){ width="300" }
+  
 
-### Submit Survey with Image
-```bash
-curl -X POST http://localhost:3000/api/survey \
-  -F image=@/absolute/path/to/survey.png
-```
-
-### Get Risk Factors & Confidence
-```bash
-curl -X POST http://localhost:3000/api/risk \
-  -H "Content-Type: application/json" \
+  ### Get Risk Factors & Confidence
+  ```bash
+  curl -X POST http://localhost:3000/api/risk \
+    -H "Content-Type: application/json" \
   -d '{
     "age": 52,
     "smoker": true,
     "exercise": "low",
     "diet": "high sugar"
-  }'
+{{ ... }}
 ```
 
 ### Get Risk Level & Score
